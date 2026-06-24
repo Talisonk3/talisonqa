@@ -21,7 +21,7 @@ Atualmente, estou aprimorando minhas competências em automação de testes End-
 ### 🚀 Projetos em Destaque
 
 * [Meu Primeiro Projeto de Automação com Cypress](#) - Testes E2E estruturados.
-* [Planejamento de Testes Manuais e BDD](#) - Exemplo prático de escrita de cenários e report de bugs.
+* * [Planejamento de Testes Manuais e BDD](./portfolio-agendalab.md) - Exemplo prático de escrita de cenários e report de bugs.
 
 ---
 

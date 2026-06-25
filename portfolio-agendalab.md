@@ -11,7 +11,7 @@
 Validar o correto funcionamento do fluxo de **Novo Agendamento** na plataforma AgendaLab, garantindo a conformidade com as regras de negócio estabelecidas e mitigando riscos antes do lançamento em produção.
 
 ## 📝 O que é BDD (Behavior-Driven Development)
-O BDD é uma prática de desenvolvimento de software que visa integrar as regras de negócio com a especificação técnica e os testes. Ele utiliza uma linguagem natural, simples e estruturada para descrever como o sistema deve se comportar do ponto de vista do usuário final.
+O BDD é uma prática de desenvolvimento de software que visa integrar as regras de negócio com a especificação técnica e os testes. Ele utiliza uma linguagem natural, simples e estruturada para描述 como o sistema deve se comportar do ponto de vista do usuário final.
 
 ### 📊 Massa de Teste Utilizada
 * **Usuário:** `usuario_normal`
@@ -53,7 +53,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🔴 Reprovado
 * **Resultado Esperado:** O campo deve rejeitar caracteres inválidos (números/símbolos) e impedir espaços em branco no início da entrada.
 * **Resultado Obtido:** O sistema permitiu a inserção de caracteres numéricos, especiais e espaço no início do campo, sem apresentar validações.
-* **Evidência:** [Clique aqui para ver](./ct-02.png.png) | [Imagem 2](./ct-02-1.png.png)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-02.png.png) | [Imagem 2](Evidências/ct-02-1.png.png)
 
 ---
 
@@ -67,7 +67,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🔴 Reprovado
 * **Resultado Esperado:** A entrada de texto deve ser restrita a dígitos numéricos, formatando automaticamente o texto de acordo com a máscara telefônica estabelecida.
 * **Resultado Obtido:** A máscara falhou em restringir a entrada, permitindo a digitação livre de caracteres alfabéticos e símbolos especiais.
-* **Evidência:**[Clique aqui para ver](./ct-03.png.png)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-03.png.png)
 
 #### **CT-04: Validar bloqueio e liberação do campo Profissional**
 **Dado** que o usuário acabou de acessar a tela de agendamento <br>
@@ -78,7 +78,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** O seletor "Profissional" deve permanecer desabilitado nativamente até que uma opção válida seja definida no campo "Serviço".
 * **Resultado Obtido:** O comportamento do elemento seguiu a regra de dependência: permaneceu bloqueado inicialmente e foi liberado após a seleção do serviço.
-* **Evidência:** [Clique aqui para ver](./ct-04.gif.gif)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-04.gif.gif)
 
 #### **CT-05: Validar filtro de Profissionais por Serviço selecionado**
 **Dado** que o usuário selecionou o serviço "Consulta inicial" <br>
@@ -89,7 +89,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** A listagem do componente deve ser filtrada dinamicamente, exibindo apenas os profissionais vinculados à especialidade selecionada.
 * **Resultado Obtido:** O filtro funcionou corretamente, exibindo exclusivamente os profissionais associados ao serviço escolhido.
-* **Evidência:** [Clique aqui para ver](./ct-05.png.png) | [Imagem 2](./ct-05-1.png.png)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-05.png.png) | [Imagem 2](Evidências/ct-05-1.png.png)
 
 ---
 
@@ -103,7 +103,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🔴 Reprovado
 * **Resultado Esperado:** A digitação deve respeitar estritamente o limite de caracteres da máscara padrão DD/MM/AAAA.
 * **Resultado Obtido:** O campo falhou na limitação de caracteres do bloco correspondente ao ano, permitindo a inserção de até 6 dígitos.
-* **Evidência:** [Clique aqui para ver](./ct-06.png.png)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-06.png.png)
 
 #### **CT-07: Validar impedimento de agendamento em data retroativa**
 **Dado** que a data atual do sistema é hoje <br>
@@ -114,7 +114,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** O sistema deve bloquear a confirmação do agendamento para períodos passados, retornando um alerta restritivo.
 * **Resultado Obtido:** O bloqueio foi efetuado com sucesso e o alerta impeditivo de data retroativa foi gerado em tela.
-* **Evidência:** [Clique aqui para ver](./ct-07.png.png)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-07.png.png)
 
 #### **CT-08: Validar aviso de impedimento de agendamento aos domingos (Interface)**
 **Dado** que eu estou na tela de formulário de agendamento <br>
@@ -124,7 +124,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** Exibição de um rótulo de erro logo abaixo do seletor de data, ao selecionar um dia correspondente a domingo.
 * **Resultado Obtido:** A mensagem de aviso foi renderizada na interface imediatamente após a seleção da data inválida.
-* **Evidência:** [Clique aqui para ver](./ct-08.png.png)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-08.png.png)
 
 #### **CT-09: Validar aviso de impedimento de agendamento aos domingos (Submissão)**
 **Dado** que eu preenchi todos os campos obrigatórios do formulário <br>
@@ -135,7 +135,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** Ao tentar submeter o formulário com um domingo selecionado, o processamento deve ser interrompido e um alerta global de erro deve surgir no topo da tela.
 * **Resultado Obtido:** O agendamento foi retido pelo sistema e o alerta no topo da tela foi exibido com a mensagem correta ("Não é possível agendar para domingo.").
-* **Evidência:** [Clique aqui para ver](./ct-09.png.png)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-09.png.png)
 
 ---
 
@@ -151,7 +151,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** O campo "Horário" deve manter o estado desabilitado até que as condições de dependência (Profissional e Data) sejam satisfeitas.
 * **Resultado Obtido:** O seletor comportou-se de forma reativa, liberando o acesso somente após o preenchimento de ambas as dependências.
-* **Evidência:** [Clique aqui para ver](./ct-10.gif.gif)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-10.gif.gif)
 
 #### **CT-11: Validar as opções disponíveis no campo Horário**
 **Dado** que o campo "Horário" foi liberado para preenchimento <br>
@@ -161,7 +161,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** O menu suspenso (dropdown) de horários deve listar unicamente os períodos comerciais definidos na especificação técnica.
 * **Resultado Obtido:** A listagem exibiu estritamente o escopo de horários delimitados na regra de negócio.
-* **Evidência:** [Clique aqui para ver](./ct-11.png.png)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-11.png.png)
 
 ---
 
@@ -177,7 +177,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** O sistema deve permitir a conclusão do agendamento sem dados neste campo e travar fisicamente a inserção a partir do 201º caractere.
 * **Resultado Obtido:** O fluxo de sucesso foi mantido com o campo em branco e o limite estrito de 200 caracteres impediu entradas adicionais.
-* **Evidência:** [Clique aqui para ver](./ct-12.gif.gif)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-12.gif.gif)
 
 #### **CT-13: Validar impedimento de agendamento duplicado (Mesmo Profissional, Data e Horário)**
 **Dado** que já existe um agendamento confirmado para o "Profissional X" na "Data Y" no "Horário Z" <br>
@@ -187,7 +187,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** O seletor de horários deve exibir como desabilitado ou indisponível o horário que já possui um agendamento confirmado para o mesmo profissional e data.
 * **Resultado Obtido:** O horário em conflito foi exibido de forma indisponível, impedindo o clique do usuário.
-* **Evidência:** [Clique aqui para ver](./ct-13.gif.gif)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-13.gif.gif)
 
 #### **CT-14: Validar confirmação de agendamento com sucesso**
 **Dado** que o usuário preencheu todos os campos obrigatórios corretamente <br>
@@ -199,7 +199,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Status:** 🟢 Aprovado
 * **Resultado Esperado:** O sistema deve persistir os dados informados, disparar uma notificação visual de sucesso e listar o novo registro na aba de controle do usuário.
 * **Resultado Obtido:** A mensagem de sucesso foi exibida adequadamente na interface e o novo agendamento constou imediatamente no histórico da aba "Meus agendamentos".
-* **Evidência:** [Clique aqui para ver](./ct-14.gif.gif)
+* **Evidência:** [Clique aqui para ver](Evidências/ct-14.gif.gif)
 
 ---
 
@@ -236,8 +236,8 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Resultado Obtido:** O campo aceita todos os caracteres digitados e permite o avanço do formulário.
 
 **📸 Evidências do BUG-01:**
-![Evidência Bug Nome 1](./ct-02.png.png)
-![Evidência Bug Nome 2](./ct-02-1.png.png)
+![Evidência Bug Nome 1](Evidências/ct-02.png.png)
+![Evidência Bug Nome 2](Evidências/ct-02-1.png.png)
 
 ---
 
@@ -259,7 +259,7 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 > **Obs:** Recomenda-se ajustar o campo para aplicar a máscara de formatação automaticamente conforme os números sono digitados. Isso elimina a necessidade de o usuário inserir caracteres especiais manualmente e evita o estouro do limite máximo de dígitos.
 
 **📸 Evidências do BUG-02:**
-![Evidência Bug Telefone](./ct-03.png.png)
+![Evidência Bug Telefone](Evidências/ct-03.png.png)
 
 ---
 
@@ -278,4 +278,4 @@ Para a modelagem dos cenários de teste, foi utilizada como base a documentaçã
 * **Resultado Obtido:** O campo aceita até 6 numbers na seção do ano, exibindo visualmente `24/06/202622`.
 
 **📸 Evidências do BUG-03:**
-![Evidência Bug Data](./ct-06.png.png)
+![Evidência Bug Data](Evidências/ct-06.png.png)

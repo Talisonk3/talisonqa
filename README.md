@@ -20,7 +20,7 @@ Atualmente, estou aprimorando minhas competências em automação de testes End-
 
 ### 🚀 Projetos em Destaque
 
-*  [Planejamento de Testes Manuais e BDD]([./portfolio-agendalab.md](https://github.com/Talisonk3/planejamento-testes-agendalab.git)) - Exemplo prático de escrita de cenários e report de bugs.
+*  * [Planejamento de Testes Manuais e BDD](https://github.com/Talisonk3/planejamento-testes-agendalab) - Exemplo prático de escrita de cenários e report de bugs.
 
 ---
 
